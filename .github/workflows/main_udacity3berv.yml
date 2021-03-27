@@ -25,11 +25,14 @@ jobs:
       uses: azure/appservice-build@v2
       with:
         platform: python
+        source-directory: web
+        output-directory: web
         platform-version: '3.8'
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'udacity3berv'
+        package: web
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_91b0e4a120494a86a72301be22418075 }}
