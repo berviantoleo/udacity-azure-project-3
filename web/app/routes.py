@@ -2,7 +2,7 @@ from app import app, db, queue_client
 from datetime import datetime
 from app.models import Attendee, Conference, Notification
 from flask import render_template, session, request, redirect, url_for, flash, make_response, session
-from azure.servicebus import Message
+from azure.servicebus import ServiceBusMessage
 import logging
 import sys
 
@@ -66,7 +66,7 @@ def notification():
             db.session.add(notification)
             db.session.commit()
 
-            message = Message(notification.id)
+            message = ServiceBusMessage(notification.id)
             queue_client.send_message(message)
 
             return redirect('/Notifications')
