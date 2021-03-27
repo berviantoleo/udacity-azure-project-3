@@ -35,7 +35,7 @@ def main(msg: func.ServiceBusMessage):
         # Update the notification table by setting the completed date and updating the status with the total number of attendees notified
         total_attendees = 'Notified {} attendees'.format(len(attendees))
         cur.execute("UPDATE notification SET status = %s WHERE id=%s;", (total_attendees,notification_id))
-        cur.commit()
+        conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
         logging.error(error)
     finally:
