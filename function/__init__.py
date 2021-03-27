@@ -15,15 +15,15 @@ def main(msg: func.ServiceBusMessage):
     try:
         cur = conn.cursor()
         cur.execute("SELECT message,subject FROM notification WHERE id=%s;",(notification_id,))
-        message, subject = cur.fetchone()
+        messagePlain, subject = cur.fetchone()
         cur.execute("SELECT email,first_name FROM attendee;")
         attendees = cur.fetchall()
         for attendee in attendees:
           message = Mail(
               from_email='from_email@example.com',
               to_emails=attendee[0],
-              subject=subject + '-' + attendee[1],
-              html_content=message)
+              subject='{}: {}'.format(attendee[1], subject),
+              html_content=messagePlain)
           try:
               sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
               response = sg.send(message)
@@ -33,7 +33,7 @@ def main(msg: func.ServiceBusMessage):
           except Exception as e:
               print(str(e))
         # Update the notification table by setting the completed date and updating the status with the total number of attendees notified
-        total_attendees = len(attendees)
+        total_attendees = 'Notified {} attendees'.format(len(attendees))
         cur.execute("UPDATE notification SET status = %s WHERE id=%s;", (total_attendees,notification_id))
         cur.commit()
     except (Exception, psycopg2.DatabaseError) as error:
