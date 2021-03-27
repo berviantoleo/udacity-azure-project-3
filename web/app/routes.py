@@ -73,7 +73,7 @@ def notification():
         except :
             logging.error('log unable to save notification')
             logging.error("Unexpected error:", sys.exc_info()[0])
-            return redirect('/Notifications')
+            raise
 
     else:
         return render_template('notification.html')
