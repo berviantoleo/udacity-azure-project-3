@@ -4,6 +4,7 @@ from app.models import Attendee, Conference, Notification
 from flask import render_template, session, request, redirect, url_for, flash, make_response, session
 from azure.servicebus import Message
 import logging
+import sys
 
 @app.route('/')
 def index():
@@ -71,6 +72,7 @@ def notification():
             return redirect('/Notifications')
         except :
             logging.error('log unable to save notification')
+            logging.error("Unexpected error:", sys.exc_info()[0])
             return redirect('/Notifications')
 
     else:
