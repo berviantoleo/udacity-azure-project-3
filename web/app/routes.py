@@ -67,7 +67,7 @@ def notification():
             db.session.commit()
 
             message = ServiceBusMessage(str(notification.id))
-            queue_client.send_message(message)
+            queue_client.send_messages(message)
 
             return redirect('/Notifications')
         except :
