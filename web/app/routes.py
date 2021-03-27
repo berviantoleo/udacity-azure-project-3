@@ -65,13 +65,13 @@ def notification():
             db.session.add(notification)
             db.session.commit()
 
-            # TODO Call servicebus queue_client to enqueue notification ID
             message = Message(notification.id)
             queue_client.send_message(message)
 
             return redirect('/Notifications')
         except :
             logging.error('log unable to save notification')
+            return redirect('/Notifications')
 
     else:
         return render_template('notification.html')
