@@ -6,7 +6,7 @@ The TechConf website allows attendees to register for an upcoming conference. Ad
 The application is currently working but the following pain points have triggered the need for migration to Azure:
  - The web application is not scalable to handle user load at peak
  - When the admin sends out notifications, it's currently taking a long time because it's looping through all attendees, resulting in some HTTP timeout exceptions
- - The current architecture is not cost-effective 
+ - The current architecture is not cost-effective
 
 In this project, you are tasked to do the following:
 - Migrate and deploy the pre-existing web app to an Azure App Service
@@ -63,9 +63,10 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 
 | Azure Resource | Service Tier | Monthly Cost |
 | ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |     |              |
-| *Azure Service Bus*   |         |              |
-| ...                   |         |              |
-
+| *Azure Postgres Database* | Single Server - Basic - 1 vCore - 21 GB | $34.58 |
+| *Azure Service Bus*   | Basic - 100 Million | $5.0 |
+| *Azure Function App* | 100 Million call - 200 ms time | $33.40 |
+| *Total* | | $72.98 |
 ## Architecture Explanation
 This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+
