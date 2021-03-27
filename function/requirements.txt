@@ -1,5 +1,5 @@
 # Do not include azure-functions-worker as it may conflict with the Azure Functions platform
 
 azure-functions
-psycopg2==2.8.5
+psycopg2-binary
 sendgrid==6.3.0
