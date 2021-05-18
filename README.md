@@ -1,3 +1,9 @@
+__NOTICE!__
+
+```
+Please use this repo as study purpose not for submission, never cheating for submission!
+```
+
 # TechConf Registration Website
 
 ## Project Overview
