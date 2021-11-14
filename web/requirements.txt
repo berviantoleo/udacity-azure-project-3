@@ -8,7 +8,7 @@ colorama==0.4.4
 cryptography==3.4.7
 Flask==2.0.2
 Flask-SQLAlchemy==2.5.1
-idna==2.10
+idna==3.3
 isodate==0.6.0
 isort==5.8.0
 itsdangerous==2.0.1
