@@ -18,7 +18,7 @@ MarkupSafe==2.0.1
 mccabe==0.7.0
 msrest==0.6.21
 msrestazure==0.6.4
-oauthlib==3.1.1
+oauthlib==3.2.0
 psycopg2==2.9.3
 pycparser==2.21
 PyJWT==2.3.0
