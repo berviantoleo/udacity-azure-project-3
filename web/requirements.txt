@@ -6,7 +6,7 @@ chardet==4.0.0
 click==8.0.4
 colorama==0.4.4
 cryptography==36.0.2
-Flask==2.0.3
+Flask==2.1.1
 Flask-SQLAlchemy==2.5.1
 idna==3.3
 isodate==0.6.1
