@@ -7,7 +7,7 @@
 
 The skelton of the `__init__.py` file will consist of the following logic:
 
-```
+```python
 import logging
 import azure.functions as func
 import psycopg2
