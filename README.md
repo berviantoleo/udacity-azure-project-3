@@ -7,6 +7,7 @@ Please use this repo as study purpose not for submission, never cheating for sub
 # TechConf Registration Website
 
 ## Project Overview
+
 The TechConf website allows attendees to register for an upcoming conference. Administrators can also view the list of attendees and notify all attendees via a personalized email message.
 
 The application is currently working but the following pain points have triggered the need for migration to Azure:
@@ -31,6 +32,7 @@ You will need to install the following locally:
 ## Project Instructions
 
 ### Part 1: Create Azure Resources and Deploy Web App
+
 1. Create a Resource group
 2. Create an Azure Postgres Database single server
    - Add a new database `techconfdb`
@@ -48,6 +50,7 @@ You will need to install the following locally:
 6. Deploy the web app
 
 ### Part 2: Create and Publish Azure Function
+
 1. Create an Azure Function in the `function` folder that is triggered by the service bus queue created in Part 1.
 
       **Note**: Skeleton code has been provided in the **README** file located in the `function` folder. You will need to copy/paste this code into the `__init.py__` file in the `function` folder.
@@ -60,11 +63,13 @@ You will need to install the following locally:
 2. Publish the Azure Function
 
 ### Part 3: Refactor `routes.py`
+
 1. Refactor the post logic in `web/app/routes.py -> notification()` using servicebus `queue_client`:
    - The notification method on POST should save the notification object and queue the notification id for the function to pick it up
 2. Re-deploy the web app to publish changes
 
 ## Monthly Cost Analysis
+
 Complete a month cost analysis of each Azure resource to give an estimate total cost using the table below:
 
 | Azure Resource | Service Tier | Monthly Cost |
@@ -74,6 +79,7 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 | *Azure Function App* | 1 Million call - 5000 ms time | $3.60 |
 | *Azure Web App* | Free | Free |
 | *Total* | | $38.23 |
+
 ## Architecture Explanation
 
 Because this app have sending email which is good to place into background process, we need to split the sending email and the web app itself. The web app only do listing and sending queue, the Free Tier is enough for doing this since the web trafic not really high. The cost will move to background process, it will depend how much we sending the email, how much the attendee, if the attendee quite many, that will affect to execution time which is increase the monthly cost. But, the Azure Function App is quite cheap and we not suffer the web app to have more high resource.
