@@ -28,7 +28,7 @@ jobs:
         python-version: '3.8'
 
     - name: Build using AppService-Build
-      uses: azure/appservice-build@v2
+      uses: azure/appservice-build@v3
       with:
         platform: python
         source-directory: web
