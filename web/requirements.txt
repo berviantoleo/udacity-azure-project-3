@@ -32,4 +32,4 @@ SQLAlchemy==2.0.3
 toml==0.10.2
 uamqp==1.6.4
 urllib3==1.26.14
-Werkzeug==2.2.2
+Werkzeug==2.2.3
