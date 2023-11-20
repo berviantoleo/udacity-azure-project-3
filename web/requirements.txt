@@ -30,6 +30,6 @@ sendgrid==6.10.0
 six==1.16.0
 SQLAlchemy==2.0.23
 toml==0.10.2
-uamqp==1.6.5
+uamqp==1.6.6
 urllib3==2.1.0
 Werkzeug==3.0.1
