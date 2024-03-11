@@ -28,7 +28,7 @@ requests==2.31.0
 requests-oauthlib==1.4.0
 sendgrid==6.11.0
 six==1.16.0
-SQLAlchemy==2.0.27
+SQLAlchemy==2.0.28
 toml==0.10.2
 uamqp==1.6.8
 urllib3==2.2.1
