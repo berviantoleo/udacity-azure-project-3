@@ -17,7 +17,7 @@ on:
       - 'web/**'
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/checkout@v4
@@ -25,7 +25,7 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v5
       with:
-        python-version: '3.8'
+        python-version: '3.12'
 
     - name: Build using AppService-Build
       uses: azure/appservice-build@v3
@@ -33,7 +33,7 @@ jobs:
         platform: python
         source-directory: web
         output-directory: web
-        platform-version: '3.8'
+        platform-version: '3.12'
 
 #    - name: 'Deploy to Azure Web App'
 #      uses: azure/webapps-deploy@v2
