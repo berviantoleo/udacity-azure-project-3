@@ -23,11 +23,11 @@ on:
 env:
   AZURE_FUNCTIONAPP_NAME: funtions_berv # set this to your application's name
   AZURE_FUNCTIONAPP_PACKAGE_PATH: 'function'   # set this to the path to your web app project, defaults to the repository root
-  PYTHON_VERSION: '3.8'                 # set this to the python version to use (supports 3.6, 3.7, 3.8)
+  PYTHON_VERSION: '3.12'                 # set this to the python version to use (supports 3.6, 3.7, 3.8)
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     environment: dev
     steps:
     - name: 'Checkout GitHub Action'
