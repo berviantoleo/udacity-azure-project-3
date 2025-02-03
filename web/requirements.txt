@@ -10,7 +10,7 @@ Flask==3.1.0
 Flask-SQLAlchemy==3.1.1
 idna==3.10
 isodate==0.7.2
-isort==5.13.2
+isort==6.0.0
 itsdangerous==2.2.0
 Jinja2==3.1.5
 lazy-object-proxy==1.10.0
