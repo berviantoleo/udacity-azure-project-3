@@ -21,7 +21,7 @@ oauthlib==3.2.2
 psycopg2==2.9.10
 pycparser==2.22
 PyJWT==2.10.1
-pylint==3.3.3
+pylint==3.3.4
 python-dateutil==2.9.0.post0
 python-http-client==3.3.7
 requests==2.32.3
