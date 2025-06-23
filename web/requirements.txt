@@ -17,7 +17,7 @@ lazy-object-proxy==1.11.0
 MarkupSafe==3.0.2
 msrest==0.7.1
 msrestazure==0.6.4.post1
-oauthlib==3.2.2
+oauthlib==3.3.1
 psycopg2==2.9.10
 pycparser==2.22
 PyJWT==2.10.1
