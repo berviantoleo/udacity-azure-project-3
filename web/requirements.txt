@@ -24,7 +24,7 @@ PyJWT==2.10.1
 pylint==3.3.8
 python-dateutil==2.9.0.post0
 python-http-client==3.3.7
-requests==2.32.4
+requests==2.32.5
 requests-oauthlib==2.0.0
 sendgrid==6.12.4
 six==1.17.0
