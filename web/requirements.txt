@@ -1,6 +1,6 @@
 azure-common==1.1.28
 azure-servicebus==7.14.2
-certifi==2025.8.3
+certifi==2025.10.5
 cffi==2.0.0
 chardet==5.2.0
 click==8.1.8
