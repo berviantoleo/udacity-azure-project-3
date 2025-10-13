@@ -3,7 +3,7 @@ azure-servicebus==7.14.2
 certifi==2025.10.5
 cffi==2.0.0
 chardet==5.2.0
-click==8.1.8
+click==8.3.0
 colorama==0.4.6
 cryptography==46.0.2
 Flask==3.1.2
