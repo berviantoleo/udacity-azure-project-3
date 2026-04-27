@@ -18,7 +18,7 @@ MarkupSafe==3.0.3
 msrest==0.7.1
 msrestazure==0.6.4.post1
 oauthlib==3.3.1
-psycopg2==2.9.11
+psycopg2==2.9.12
 pycparser==3.0
 PyJWT==2.12.1
 pylint==4.0.5
