@@ -2,7 +2,7 @@ azure-common==1.1.28
 azure-servicebus==7.14.3
 certifi==2026.7.22
 cffi==2.1.1
-chardet==7.4.3
+chardet==7.5.1
 click==8.4.2
 colorama==0.4.6
 cryptography==50.0.0
